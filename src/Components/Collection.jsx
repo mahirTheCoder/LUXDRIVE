@@ -2,9 +2,14 @@ import React from "react";
 import audi from "../assets/images/audi.png";
 import nissan from "../assets/images/nissan.png";
 import porshe from "../assets/images/porshe.png";
+import bmw from "../assets/images/bmw.png";
+import x7 from "../assets/images/x7.png";
+import p2 from "../assets/images/porshe2.png";
 import { SlSpeedometer } from "react-icons/sl";
 import { GiAutoRepair, GiElectricalCrescent } from "react-icons/gi";
 import { PiPersonSimpleThrowFill } from "react-icons/pi";
+import { Link } from "react-router";
+import { FaArrowRight } from "react-icons/fa";
 
 const Collection = () => {
   return (
@@ -213,12 +218,12 @@ const Collection = () => {
           <div className="CarBoth flex justify-between mb-9">
             <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
               <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={audi} alt="audi car" />
+                <img src={bmw} alt="audi car" />
               </div>
               <div className="contentPart">
                 <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
                   {" "}
-                  Audi A8 L 2022
+                  BMW M8 Coupe 2022
                 </h2>
                 <h1 className="text-3xl font-extrabold text-black mb-4  ">
                   78.90{" "}
@@ -267,12 +272,12 @@ const Collection = () => {
 
             <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
               <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={nissan} alt="audi car" />
+                <img src={x7} alt="audi car" />
               </div>
               <div className="contentPart">
                 <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
                   {" "}
-                  Nissan Maxima Platinum 2022
+                  BMW X7 M50i 2022
                 </h2>
                 <h1 className="text-3xl font-extrabold text-black mb-4  ">
                   78.90{" "}
@@ -321,7 +326,7 @@ const Collection = () => {
 
             <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
               <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={porshe} alt="audi car" />
+                <img src={p2} alt="audi car" />
               </div>
               <div className="contentPart">
                 <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
@@ -372,6 +377,17 @@ const Collection = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* ---------button--------- */}
+          <div className="button w-full flex justify-center  ">
+            <Link
+              to="/"
+              className="text-xs sm:text-sm font-semibold font-figtree text-primary flex justify-center items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border border-primary rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 w-fit "
+            >
+              Sea all cars
+              <FaArrowRight className="text-xs sm:text-sm" />
+            </Link>
           </div>
         </div>
       </section>
