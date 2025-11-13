@@ -37,7 +37,7 @@ const Hero = () => {
                 Pick-up Location
               </label>
               <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2">
-                <IoLocationSharp className="text-black text-lg sm:text-xl mr-2 flex-shrink-0" />
+                <IoLocationSharp className="text-black text-lg sm:text-xl mr-2" />
                 <input
                   type="text"
                   name="pickupLocation"
@@ -71,7 +71,7 @@ const Hero = () => {
                 Drop-off Location
               </label>
               <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2">
-                <IoLocationSharp className="text-black text-lg sm:text-xl mr-2 flex-shrink-0" />
+                <IoLocationSharp className="text-black text-lg sm:text-xl mr-20" />
                 <input
                   type="text"
                   name="dropoffLocation"
