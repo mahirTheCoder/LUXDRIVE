@@ -24,7 +24,7 @@ const Navbar = () => {
 
               {/* -----login button-------- */}
               <div className="button">
-                <Link to='/' className="text-white border border-gray-600 font-figtree py-2.5 px-2  lg:py-3.5 lg:px-6 rounded-full lg:text-base text-xs font-semibold">
+                <Link to='/' className="text-white border border-gray-600 font-figtree py-2.5 px-3  lg:py-3.5 lg:px-6 rounded-full lg:text-base text-xs font-semibold">
                   {" "}
                   Login/Register{" "}
                 </Link>
