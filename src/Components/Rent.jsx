@@ -22,7 +22,7 @@ const Rent = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="mb-8 sm:mb-10 lg:mb-12">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+          <div className="flex justify-between sm:flex-row sm:justify-between sm:items-center gap-4">
             <h2 className="text-xl sm:text-2xl lg:text-3xl text-primary font-bold font-figtree">
               Rent by Brands
             </h2>

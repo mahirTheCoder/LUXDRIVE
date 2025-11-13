@@ -5,6 +5,7 @@ import Banner from '../Components/Banner'
 import Hero from '../Components/Hero'
 import Rent from '../Components/Rent'
 import RentBody from '../Components/RentBody'
+import Collection from '../Components/Collection'
 
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
     <Hero/>
     <Rent/>
     <RentBody/>
+    <Collection/>
     </>
   )
 }
