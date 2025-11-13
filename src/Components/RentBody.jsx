@@ -13,6 +13,7 @@ import img9 from "../assets/images/9.png";
 import img10 from "../assets/images/10.png";
 import img11 from "../assets/images/11.png";
 import img12 from "../assets/images/12.png";
+
 const RentBody = () => {
   return (
     <>

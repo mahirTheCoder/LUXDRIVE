@@ -1,4 +1,8 @@
 import React from "react";
+import audi from "../assets/images/audi.png";
+import { SlSpeedometer } from "react-icons/sl";
+import { GiAutoRepair, GiElectricalCrescent } from "react-icons/gi";
+import { PiPersonSimpleThrowFill } from "react-icons/pi";
 
 const Collection = () => {
   return (
@@ -38,14 +42,64 @@ const Collection = () => {
             </div>
           </div>
 
+
           {/* -------car details -------- */}
-          <div className="main w-[384px] h-[538px] ">
-            <div className="imgpart w-full h-[260px] ">
-              <img src={''} alt="audi car" />
+          <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-xl">
+            <div className="imgpart w-full h-[260px] mb-6 ">
+              <img src={audi} alt="audi car" />
             </div>
-            <div className="contentPart"></div>
+            <div className="contentPart">
+              <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
+                {" "}
+                Audi A8 L 2022
+              </h2>
+              <h1 className="text-3xl font-extrabold text-black mb-4  ">
+                78.90{" "}
+                <span className="text-base font-normal text-gray-400 font-figtree">
+                  /day
+                </span>
+              </h1>
+              <div className="details w-full h-16 bg-gray-200 rounded-xl flex justify-between items-center px-4 mb-5 ">
+                <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
+                  <button>
+                    <SlSpeedometer />
+                  </button>
+                  <p>4000</p>
+                </div>
+
+                <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
+                  <button>
+                    <GiAutoRepair />
+                  </button>
+                  <p>Auto</p>
+                </div>
+
+                <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
+                  <button>
+                    <PiPersonSimpleThrowFill />
+                  </button>
+                  <p>4 Person</p>
+                </div>
+
+                <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
+                  <button>
+                    <GiElectricalCrescent />
+                  </button>
+                  <p>Electric</p>
+                </div>
+              </div>
+
+              {/* ----------button-------- */}
+              <div className="buttonPart text-center">
+                <button className="py-4 px-30 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
+                  Vintage Car
+                </button>
+              </div>
+            </div>
           </div>
 
+
+          
         </div>
       </section>
     </>
