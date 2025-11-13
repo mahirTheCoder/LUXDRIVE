@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <section id="navbar">
-        <nav className="py-5 sticky  relative  top-0 left-0 z-50">
+        <nav className="py-5 sticky bg-[#000] ">
           <div className="container">
             <div className="nav-content flex items-center justify-between">
 
