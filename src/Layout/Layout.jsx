@@ -8,6 +8,8 @@ import RentBody from '../Components/RentBody'
 import Collection from '../Components/Collection'
 import Works from '../Components/Works'
 import Service from '../Components/Service'
+import Customers from '../Components/Customers'
+import Footer from '../Components/Footer'
 const Layout = () => {
   return (
     <>
@@ -20,6 +22,8 @@ const Layout = () => {
     <Collection/>
     <Works />
     <Service />
+    <Customers/>
+    <Footer/>
     </>
   )
 }
