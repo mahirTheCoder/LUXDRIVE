@@ -1,24 +1,23 @@
-import React from "react";
-import { FaArrowRight } from "react-icons/fa";
-import {
-  SiAudi,
-  SiBmw,
-  SiChevrolet,
-  SiFord,
-  SiHonda,
-  SiHyundai,
-  SiMercedes,
-  SiNissan,
-  SiTesla,
-  SiToyota,
-  SiWwe,
-} from "react-icons/si";
-import { Link } from "react-router";
-import { SiKia } from "react-icons/si";
-
-const Rent = () => {
+import React from 'react'
+import { FaArrowRight } from 'react-icons/fa'
+import { TbCarSuvFilled } from 'react-icons/tb'
+import { Link } from 'react-router'
+import img1 from '../assets/images/1.png'
+import img2 from '../assets/images/2.png'
+import img3 from '../assets/images/3.png'
+import img4 from '../assets/images/4.png'
+import img5 from '../assets/images/5.png'
+import img6 from '../assets/images/6.png'
+import img7 from '../assets/images/7.png'
+import img8 from '../assets/images/8.png'
+import img9 from '../assets/images/9.png'
+import img10 from '../assets/images/10.png'
+import img11 from '../assets/images/11.png'
+import img12 from '../assets/images/12.png'
+const RentBody = () => {
   return (
-    <section id="rent" className="w-full py-8 sm:py-12 lg:py-16 mb-17">
+    <>
+      <section id="rent" className="w-full py-8 sm:py-12 lg:py-16 mb-17">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="mb-8 sm:mb-10 lg:mb-12">
@@ -41,51 +40,38 @@ const Rent = () => {
           {/* First Row */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6">
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiToyota />
-              </span>
+           <img src={img1} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Toyota
+                SUV
               </h2>
             </div>
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiFord />
-              </span>
+                 <img src={img1} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Ford
+                Crossover
               </h2>
             </div>
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiTesla />
-              </span>
+                <img src={img3} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Tesla
+                Wagon
               </h2>
             </div>
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiHonda />
-              </span>
+               <img src={img4} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Honda
+                Family MBP
               </h2>
             </div>
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiNissan />
-              </span>
+                <img src={img5} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Nissan
-              </h2>
+Sport Coupe              </h2>
             </div>
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiChevrolet />
-              </span>
+                <img src={img6} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Chevrolet
+                Compact
               </h2>
             </div>
           </div>
@@ -93,58 +79,46 @@ const Rent = () => {
           {/* Second Row */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-6">
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiBmw />
-              </span>
+               <img src={img7} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                BMW
+                Coup
               </h2>
             </div>
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiMercedes />
-              </span>
+                <img src={img8} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Mercedes-Benz
+BMW              </h2>
+            </div>
+            <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
+            <img src={img9} alt="img" />
+              <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
+                Sedan
               </h2>
             </div>
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiHyundai />
-              </span>
+                <img src={img10} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Hyundai
+                Limousine
               </h2>
             </div>
             <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiAudi />
-              </span>
+              <img src={img11} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Audi
-              </h2>
-            </div>
-            <div className="brand flex flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiKia />
-              </span>
-              <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                KIA
+                Convertible
               </h2>
             </div>
             <div className="hidden lg:flex brand flex-col justify-center items-center bg-[#F5F5F5] rounded-xl sm:rounded-2xl py-4 sm:py-6 gap-2 sm:gap-4 cursor-pointer hover:shadow-lg transition-all duration-300">
-              <span className="text-3xl sm:text-5xl lg:text-6xl text-primary">
-                <SiHyundai />
-              </span>
+               <img src={img12} alt="img" />
               <h2 className="text-xs sm:text-sm lg:text-base font-medium font-figtree text-primary text-center">
-                Extra Brand
+               Crossover
               </h2>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+    </>
+  )
+}
 
-export default Rent;
+export default RentBody
