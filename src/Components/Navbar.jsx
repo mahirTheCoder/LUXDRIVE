@@ -1,6 +1,7 @@
 import React from "react";
 import { TbMenu } from "react-icons/tb";
 import logo from "../../public/Images/Heading.png";
+import { Link } from "react-router";
 const Navbar = () => {
   return (
     <>
@@ -23,10 +24,10 @@ const Navbar = () => {
 
               {/* -----login button-------- */}
               <div className="button">
-                <button className="text-white border font-figtree py-1 px-2  lg:py-2 lg:px-6 rounded-full lg:text-base text-xs font-semibold">
+                <Link to='/' className="text-white border font-figtree py-1 px-2  lg:py-2 lg:px-6 rounded-full lg:text-base text-xs font-semibold">
                   {" "}
                   Login/Register{" "}
-                </button>
+                </Link>
               </div>
             </div>
           </div>

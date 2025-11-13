@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <section
       id="banner"
-      className="relative w-full h-[450px] sm:h-[550px] md:h-[650px] lg:h-[833px] overflow-hidden"
+      className="relative w-full h-[400px] sm:h-[550px] md:h-[650px] lg:h-[833px] overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
