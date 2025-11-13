@@ -6,7 +6,7 @@ import Hero from '../Components/Hero'
 import Rent from '../Components/Rent'
 import RentBody from '../Components/RentBody'
 import Collection from '../Components/Collection'
-
+import Works from '../Components/Works'
 const Layout = () => {
   return (
     <>
@@ -17,6 +17,7 @@ const Layout = () => {
     <Rent/>
     <RentBody/>
     <Collection/>
+    <Works />
     </>
   )
 }
