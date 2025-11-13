@@ -1,91 +1,114 @@
+"use client";
 import React, { useState } from "react";
 import { IoLocationSharp } from "react-icons/io5";
 
 const Hero = () => {
-  const [pickupLocation, setPickupLocation] = useState("");
-  const [pickupDate, setPickupDate] = useState("");
-  const [dropoffLocation, setDropoffLocation] = useState("");
-  const [dropoffDate, setDropoffDate] = useState("");
+  const [formData, setFormData] = useState({
+    pickupLocation: "",
+    pickupDate: "",
+    dropoffLocation: "",
+    dropoffDate: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSearch = () => {
-    console.log({ pickupLocation, pickupDate, dropoffLocation, dropoffDate });
+    console.log("Search Data:", formData);
   };
 
   return (
-    <section className="w-full bg-black py-6 sm:py-8 lg:py-0">
+    <section className="w-full bg-black py-6 sm:py-8 lg:py-10">
       <div className="container mx-auto px-4">
-        {/* Search Form Container */}
-        <div className="min-h-[145px] flex items-center">
-          <div className="w-full bg-white rounded-lg p-4 sm:p-6 flex flex-col sm:flex-row items-stretch justify-between gap-3 sm:gap-4">
+        {/* Main Wrapper */}
+        <div className="flex justify-center items-center min-h-[145px]">
+          <div
+            className="
+              flex flex-col sm:flex-row flex-wrap justify-between 
+              items-stretch w-full bg-white rounded-xl shadow-lg 
+              p-4 sm:p-6 gap-4 transition-all duration-300
+            "
+          >
             {/* Pick-up Location */}
-            <div className="flex flex-col gap-2 flex-1">
-              <label className="text-xs sm:text-sm font-semibold text-black">
+            <div className="flex flex-col flex-1 min-w-[220px]">
+              <label className="text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                 Pick-up Location
               </label>
-              <div className="flex items-center gap-2 bg-gray-100 rounded px-3 py-2 flex-1">
-                <IoLocationSharp className="text-black text-lg sm:text-xl flex-shrink-0" />
+              <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2">
+                <IoLocationSharp className="text-black text-lg sm:text-xl mr-2 flex-shrink-0" />
                 <input
                   type="text"
+                  name="pickupLocation"
                   placeholder="Search location"
-                  value={pickupLocation}
-                  onChange={(e) => setPickupLocation(e.target.value)}
-                  className="bg-gray-100 outline-none w-full text-xs sm:text-sm"
+                  value={formData.pickupLocation}
+                  onChange={handleChange}
+                  className="flex-1 bg-transparent outline-none text-xs sm:text-sm text-gray-800"
                 />
               </div>
             </div>
 
             {/* Pick-up Date */}
-            <div className="flex flex-col gap-2 flex-1">
-              <label className="text-xs sm:text-sm font-semibold text-black">
+            <div className="flex flex-col flex-1 min-w-[180px]">
+              <label className="text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                 Pick-up Date
               </label>
-              <div className="flex items-center gap-2 bg-gray-100 rounded px-3 py-2 flex-1">
+              <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2">
                 <input
                   type="date"
-                  value={pickupDate}
-                  onChange={(e) => setPickupDate(e.target.value)}
-                  className="bg-gray-100 outline-none w-full text-xs sm:text-sm"
+                  name="pickupDate"
+                  value={formData.pickupDate}
+                  onChange={handleChange}
+                  className="flex-1 bg-transparent outline-none text-xs sm:text-sm text-gray-800"
                 />
               </div>
             </div>
 
             {/* Drop-off Location */}
-            <div className="flex flex-col gap-2 flex-1">
-              <label className="text-xs sm:text-sm font-semibold text-black">
+            <div className="flex flex-col flex-1 min-w-[220px]">
+              <label className="text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                 Drop-off Location
               </label>
-              <div className="flex items-center gap-2 bg-gray-100 rounded px-3 py-2 flex-1">
-                <IoLocationSharp className="text-black text-lg sm:text-xl flex-shrink-0" />
+              <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2">
+                <IoLocationSharp className="text-black text-lg sm:text-xl mr-2 flex-shrink-0" />
                 <input
                   type="text"
+                  name="dropoffLocation"
                   placeholder="Search location"
-                  value={dropoffLocation}
-                  onChange={(e) => setDropoffLocation(e.target.value)}
-                  className="bg-gray-100 outline-none w-full text-xs sm:text-sm"
+                  value={formData.dropoffLocation}
+                  onChange={handleChange}
+                  className="flex-1 bg-transparent outline-none text-xs sm:text-sm text-gray-800"
                 />
               </div>
             </div>
 
             {/* Drop-off Date */}
-            <div className="flex flex-col gap-2 flex-1">
-              <label className="text-xs sm:text-sm font-semibold text-black">
+            <div className="flex flex-col flex-1 min-w-[180px]">
+              <label className="text-xs sm:text-sm font-semibold text-gray-700 mb-2">
                 Drop-off Date
               </label>
-              <div className="flex items-center gap-2 bg-gray-100 rounded px-3 py-2 flex-1">
+              <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2">
                 <input
                   type="date"
-                  value={dropoffDate}
-                  onChange={(e) => setDropoffDate(e.target.value)}
-                  className="bg-gray-100 outline-none w-full text-xs sm:text-sm"
+                  name="dropoffDate"
+                  value={formData.dropoffDate}
+                  onChange={handleChange}
+                  className="flex-1 bg-transparent outline-none text-xs sm:text-sm text-gray-800"
                 />
               </div>
             </div>
 
             {/* Find Vehicle Button */}
-            <div className="flex items-end">
+            <div className="flex flex-1 sm:flex-none justify-center sm:justify-end items-end">
               <button
                 onClick={handleSearch}
-                className="w-full sm:w-auto bg-black text-white font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-800 transition text-xs sm:text-sm whitespace-nowrap"
+                className="
+                  bg-[#2E7D32] text-white font-semibold 
+                  px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg 
+                  hover:bg-[#27672B] transition-all duration-200 text-sm
+                  w-full sm:w-auto
+                "
               >
                 Find a Vehicle
               </button>
