@@ -12,386 +12,126 @@ import { Link } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
 
 const Collection = () => {
-  return (
-    <>
-      <section id="Collections" className="w-full py-25 bg-[#F5F5F5]">
-        <div className="container  ">
-          <div className="content-part ">
-            {/* --------text-part------- */}
-            <h2 className="text-[48px] font-bold font-figtree text-primary mb-6 text-center ">
-              Our Impressive Collection of Cars
-            </h2>
-            <p className="text-lg font-medium font-figtree text-primary w-[720px] m-auto text-center mb-12">
-              Ranging from elegant sedans to powerful sports cars, all carefully
-              selected to provide our customers with the ultimate driving
-              experience.
-            </p>
+  const carData = [
+    { img: audi, name: "Audi A8 L 2022", price: "78.90" },
+    { img: nissan, name: "Nissan Maxima Platinum 2022", price: "78.90" },
+    { img: porshe, name: "Porsche Cayenne GTS 2022", price: "78.90" },
+    { img: bmw, name: "BMW M8 Coupe 2022", price: "78.90" },
+    { img: x7, name: "BMW X7 M50i 2022", price: "78.90" },
+    { img: p2, name: "Porsche Cayenne GTS 2022", price: "78.90" },
+  ];
 
-            {/* ---------button part------- */}
-            <div className="button flex justify-center mb-16">
-              <div className="buttonPArt w-full sm:w-[700px] md:w-[800px] flex justify-between items-center text-center gap-3 flex-wrap">
-                <button className="py-2 px-4 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                  Popular Car
-                </button>
-                <button className="py-2 px-4 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                  Luxury Car
-                </button>
-                <button className="py-2 px-4 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                  Vintage Car
-                </button>
-                <button className="py-2 px-4 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                  Family Car
-                </button>
-                <button className="py-2 px-4 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                  Off-Road Car
-                </button>
-              </div>
-            </div>
+  const CarCard = ({ car }) => (
+    <div className="w-full h-auto border-2 rounded-lg sm:rounded-2xl py-2 sm:py-3 px-2 sm:px-3 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg flex flex-col">
+      <div className="w-full h-40 sm:h-52 md:h-60 mb-3 sm:mb-4 md:mb-6 overflow-hidden rounded-lg">
+        <img
+          src={car.img}
+          alt={car.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="flex-1 flex flex-col">
+        <h2 className="text-sm sm:text-base md:text-lg font-semibold font-figtree text-primary mb-2 sm:mb-3 line-clamp-2">
+          {car.name}
+        </h2>
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-black mb-3 sm:mb-4">
+          {car.price}{" "}
+          <span className="text-xs sm:text-sm font-normal text-gray-400 font-figtree">
+            /day
+          </span>
+        </h1>
+        <div className="w-full bg-gray-200 rounded-lg sm:rounded-xl py-2 sm:py-3 px-2 sm:px-4 mb-3 sm:mb-4 flex justify-between items-center gap-1 sm:gap-2">
+          <div className="font-normal text-xs flex flex-col gap-0.5 sm:gap-1 items-center text-black">
+            <button>
+              <SlSpeedometer className="text-sm sm:text-base" />
+            </button>
+            <p className="text-xs">4000</p>
           </div>
-
-          {/* -------car details -------- */}
-          <div className="CarBoth flex justify-between mb-9">
-            <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
-              <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={audi} alt="audi car" />
-              </div>
-              <div className="contentPart">
-                <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
-                  {" "}
-                  Audi A8 L 2022
-                </h2>
-                <h1 className="text-3xl font-extrabold text-black mb-4  ">
-                  78.90{" "}
-                  <span className="text-base font-normal text-gray-400 font-figtree">
-                    /day
-                  </span>
-                </h1>
-                <div className="details w-full h-16 bg-gray-200 rounded-xl flex justify-between items-center px-4 mb-5 ">
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <SlSpeedometer />
-                    </button>
-                    <p>4000</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiAutoRepair />
-                    </button>
-                    <p>Auto</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <PiPersonSimpleThrowFill />
-                    </button>
-                    <p>4 Person</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiElectricalCrescent />
-                    </button>
-                    <p>Electric</p>
-                  </div>
-                </div>
-
-                {/* ----------button-------- */}
-                <div className="buttonPart text-center">
-                  <button className="py-4 px-30 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                    Vintage Car
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
-              <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={nissan} alt="audi car" />
-              </div>
-              <div className="contentPart">
-                <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
-                  {" "}
-                  Nissan Maxima Platinum 2022
-                </h2>
-                <h1 className="text-3xl font-extrabold text-black mb-4  ">
-                  78.90{" "}
-                  <span className="text-base font-normal text-gray-400 font-figtree">
-                    /day
-                  </span>
-                </h1>
-                <div className="details w-full h-16 bg-gray-200 rounded-xl flex justify-between items-center px-4 mb-5 ">
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <SlSpeedometer />
-                    </button>
-                    <p>4000</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiAutoRepair />
-                    </button>
-                    <p>Auto</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <PiPersonSimpleThrowFill />
-                    </button>
-                    <p>4 Person</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiElectricalCrescent />
-                    </button>
-                    <p>Electric</p>
-                  </div>
-                </div>
-
-                {/* ----------button-------- */}
-                <div className="buttonPart text-center">
-                  <button className="py-4 px-30 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                    Vintage Car
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
-              <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={porshe} alt="audi car" />
-              </div>
-              <div className="contentPart">
-                <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
-                  {" "}
-                  Porsche Cayenne GTS 2022
-                </h2>
-                <h1 className="text-3xl font-extrabold text-black mb-4  ">
-                  78.90{" "}
-                  <span className="text-base font-normal text-gray-400 font-figtree">
-                    /day
-                  </span>
-                </h1>
-                <div className="details w-full h-16 bg-gray-200 rounded-xl flex justify-between items-center px-4 mb-5 ">
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <SlSpeedometer />
-                    </button>
-                    <p>4000</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiAutoRepair />
-                    </button>
-                    <p>Auto</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <PiPersonSimpleThrowFill />
-                    </button>
-                    <p>4 Person</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiElectricalCrescent />
-                    </button>
-                    <p>Electric</p>
-                  </div>
-                </div>
-
-                {/* ----------button-------- */}
-                <div className="buttonPart text-center">
-                  <button className="py-4 px-30 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                    Vintage Car
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className="font-normal text-xs flex flex-col gap-0.5 sm:gap-1 items-center text-black">
+            <button>
+              <GiAutoRepair className="text-sm sm:text-base" />
+            </button>
+            <p className="text-xs">Auto</p>
           </div>
-
-          {/* -------car details -------- */}
-          <div className="CarBoth flex justify-between mb-9">
-            <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
-              <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={bmw} alt="audi car" />
-              </div>
-              <div className="contentPart">
-                <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
-                  {" "}
-                  BMW M8 Coupe 2022
-                </h2>
-                <h1 className="text-3xl font-extrabold text-black mb-4  ">
-                  78.90{" "}
-                  <span className="text-base font-normal text-gray-400 font-figtree">
-                    /day
-                  </span>
-                </h1>
-                <div className="details w-full h-16 bg-gray-200 rounded-xl flex justify-between items-center px-4 mb-5 ">
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <SlSpeedometer />
-                    </button>
-                    <p>4000</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiAutoRepair />
-                    </button>
-                    <p>Auto</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <PiPersonSimpleThrowFill />
-                    </button>
-                    <p>4 Person</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiElectricalCrescent />
-                    </button>
-                    <p>Electric</p>
-                  </div>
-                </div>
-
-                {/* ----------button-------- */}
-                <div className="buttonPart text-center">
-                  <button className="py-4 px-30 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                    Vintage Car
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
-              <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={x7} alt="audi car" />
-              </div>
-              <div className="contentPart">
-                <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
-                  {" "}
-                  BMW X7 M50i 2022
-                </h2>
-                <h1 className="text-3xl font-extrabold text-black mb-4  ">
-                  78.90{" "}
-                  <span className="text-base font-normal text-gray-400 font-figtree">
-                    /day
-                  </span>
-                </h1>
-                <div className="details w-full h-16 bg-gray-200 rounded-xl flex justify-between items-center px-4 mb-5 ">
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <SlSpeedometer />
-                    </button>
-                    <p>4000</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiAutoRepair />
-                    </button>
-                    <p>Auto</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <PiPersonSimpleThrowFill />
-                    </button>
-                    <p>4 Person</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiElectricalCrescent />
-                    </button>
-                    <p>Electric</p>
-                  </div>
-                </div>
-
-                {/* ----------button-------- */}
-                <div className="buttonPart text-center">
-                  <button className="py-4 px-30 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                    Vintage Car
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="main w-[384px] h-[540px] border-2 rounded-2xl py-2 px-2 border-gray-200 hover:drop-shadow-xl duration-700 shadow-lg">
-              <div className="imgpart w-full h-[260px] mb-6 ">
-                <img src={p2} alt="audi car" />
-              </div>
-              <div className="contentPart">
-                <h2 className="text-xl font-semibold font-figtree text-primary mb-3">
-                  {" "}
-                  Porsche Cayenne GTS 2022
-                </h2>
-                <h1 className="text-3xl font-extrabold text-black mb-4  ">
-                  78.90{" "}
-                  <span className="text-base font-normal text-gray-400 font-figtree">
-                    /day
-                  </span>
-                </h1>
-                <div className="details w-full h-16 bg-gray-200 rounded-xl flex justify-between items-center px-4 mb-5 ">
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <SlSpeedometer />
-                    </button>
-                    <p>4000</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiAutoRepair />
-                    </button>
-                    <p>Auto</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <PiPersonSimpleThrowFill />
-                    </button>
-                    <p>4 Person</p>
-                  </div>
-
-                  <div className="speed font-normal text-xs flex flex-col gap-1 items-center text-black">
-                    <button>
-                      <GiElectricalCrescent />
-                    </button>
-                    <p>Electric</p>
-                  </div>
-                </div>
-
-                {/* ----------button-------- */}
-                <div className="buttonPart text-center">
-                  <button className="py-4 px-30 border border-gray-200 rounded-4xl text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700">
-                    Vintage Car
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div className="font-normal text-xs flex flex-col gap-0.5 sm:gap-1 items-center text-black">
+            <button>
+              <PiPersonSimpleThrowFill className="text-sm sm:text-base" />
+            </button>
+            <p className="text-xs">4 Person</p>
           </div>
-
-          {/* ---------button--------- */}
-          <div className="button w-full flex justify-center  ">
-            <Link
-              to="/"
-              className="text-xs sm:text-sm font-semibold font-figtree text-primary flex justify-center items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border border-primary rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 w-fit "
-            >
-              Sea all cars
-              <FaArrowRight className="text-xs sm:text-sm" />
-            </Link>
+          <div className="font-normal text-xs flex flex-col gap-0.5 sm:gap-1 items-center text-black">
+            <button>
+              <GiElectricalCrescent className="text-sm sm:text-base" />
+            </button>
+            <p className="text-xs">Electric</p>
           </div>
         </div>
-      </section>
-    </>
+        <div className="text-center">
+          <button className="py-2 sm:py-3 px-4 sm:px-6 border border-gray-200 rounded-full text-xs sm:text-sm text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700 w-full">
+            Vintage Car
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <section
+      id="Collections"
+      className="w-full py-10 sm:py-14 md:py-20 lg:py-28 bg-[#F5F5F5]"
+    >
+      <div className="container mx-auto px-4">
+        {/* Header Section */}
+        <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-figtree text-primary mb-4 sm:mb-6 text-center">
+            Our Impressive Collection of Cars
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg font-medium font-figtree text-primary max-w-3xl mx-auto text-center px-2">
+            Ranging from elegant sedans to powerful sports cars, all carefully
+            selected to provide our customers with the ultimate driving
+            experience.
+          </p>
+        </div>
+
+        {/* Category Buttons */}
+        <div className="flex justify-center mb-10 sm:mb-12 md:mb-14 lg:mb-16">
+          <div className="w-full flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+            {[
+              "Popular Car",
+              "Luxury Car",
+              "Vintage Car",
+              "Family Car",
+              "Off-Road Car",
+            ].map((cat) => (
+              <button
+                key={cat}
+                className="py-2 px-3 sm:py-2.5 sm:px-5 border border-gray-200 rounded-full text-xs sm:text-sm md:text-base text-primary font-bold font-figtree hover:bg-black hover:text-white duration-700"
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Cars Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 mb-10 sm:mb-12 md:mb-14 lg:mb-16">
+          {carData.map((car, idx) => (
+            <CarCard key={idx} car={car} />
+          ))}
+        </div>
+
+        {/* See All Button */}
+        <div className="flex justify-center">
+          <Link
+            to="/"
+            className="text-xs sm:text-sm font-semibold font-figtree text-primary flex justify-center items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border border-primary rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+          >
+            See all cars
+            <FaArrowRight className="text-xs sm:text-sm" />
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 };
 
