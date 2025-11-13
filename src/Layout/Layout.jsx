@@ -7,6 +7,7 @@ import Rent from '../Components/Rent'
 import RentBody from '../Components/RentBody'
 import Collection from '../Components/Collection'
 import Works from '../Components/Works'
+import Service from '../Components/Service'
 const Layout = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const Layout = () => {
     <RentBody/>
     <Collection/>
     <Works />
+    <Service />
     </>
   )
 }
