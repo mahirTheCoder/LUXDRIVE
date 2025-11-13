@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
       <section id="navbar">
-        <nav className="py-5 sticky bg-[#000] px-4">
+        <nav className="py-5 sticky bg-black px-4">
           <div className="container">
             <div className="nav-content flex items-center justify-between">
 
@@ -24,7 +24,7 @@ const Navbar = () => {
 
               {/* -----login button-------- */}
               <div className="button">
-                <Link to='/' className="text-white border font-figtree py-1 px-2  lg:py-2 lg:px-6 rounded-full lg:text-base text-xs font-semibold">
+                <Link to='/' className="text-white border border-gray-600 font-figtree py-2.5 px-2  lg:py-3.5 lg:px-6 rounded-full lg:text-base text-xs font-semibold">
                   {" "}
                   Login/Register{" "}
                 </Link>
