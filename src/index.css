@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+@import "tailwindcss";
+@utility container {
+  margin-inline: auto;
+}
+
+@theme{
+  --color-primary: #0F0F0F;
+  --font-figtree: 'Figtree', sans-serif;
+}
